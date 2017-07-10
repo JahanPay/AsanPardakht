@@ -70,6 +70,7 @@ class Welcome extends CI_Controller {
 			if( ! empty($result) and $result['result']==1)
 			{
 				$out['status'] =1;
+				$out['au'] =1;
 				$_GET['au'] = $res['bank_au'];
 				$this->db->where('id', $id);
 				$this->db->update('order', array('status'=>1)); 
